@@ -32,7 +32,7 @@ export default function ChatPage() {
     return () => {
       socket.disconnect();
     };
-  }, []);
+  }, [router]);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });

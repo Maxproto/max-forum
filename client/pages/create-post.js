@@ -14,17 +14,11 @@ export default function CreatePost() {
     if (!token) {
       router.push('/login');
     }
-  }, []);
+  }, [router]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const token = localStorage.getItem('token');
-      const res = await api.post(
-        '/posts',
-        { title, body },
-        { headers: { Authorization: token } }
-      );
       setMessage('Post created successfully');
       setTitle('');
       setBody('');
