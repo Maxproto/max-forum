@@ -1,6 +1,6 @@
-# 🗣️ Web Forum Platform
+# 🗣️ Max Web Forum
 
-A full-stack web forum with real-time chat, user authentication, and post discussion features.
+My full-stack web forum with real-time chat, user authentication, and post discussion features.
 
 👉 **Live site**: [https://max-forum.com](https://max-forum.com)
 
