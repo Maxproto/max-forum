@@ -17,7 +17,9 @@ export default function ChatPage() {
       return;
     }
 
-    socket = io('http://localhost:5000');
+    socket = io(
+      process.env.NEXT_PUBLIC_SOCKET_URL || 'http://localhost:5000'
+    );
 
     // 接收历史消息
     socket.on('chat history', (history) => {
