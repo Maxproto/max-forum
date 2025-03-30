@@ -19,11 +19,21 @@ export default function CreatePost() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      setMessage('Post created successfully');
+      const token = localStorage.getItem('token');
+      await api.post(
+        '/posts',
+        { title, body },
+        {
+          headers: {
+            Authorization: token,
+          },
+        }
+      );
+      setMessage('✅ Post created successfully!');
       setTitle('');
       setBody('');
     } catch (error) {
-      setMessage(error.response?.data?.message || 'Error occurred');
+      setMessage(error.response?.data?.message || '❌ Error occurred');
     }
   };
 
